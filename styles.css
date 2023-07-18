@@ -1,0 +1,154 @@
+body {
+    background-color: #d9daeb;
+    width: 100%;
+    margin: 0;
+    color: #0b0136;
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #032072;
+    color: #fff;
+    padding: 10px;
+    z-index: 100;
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+.component {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.content {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    align-content: center;
+    max-width: 600px; 
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#foot{
+    background-color: rgb(0, 0, 0);
+    color: #818181;
+    padding: 2em;
+    text-align: center;
+    margin-bottom: 0;
+}
+.foot-1{
+    padding: 0.8em;
+    background-color: #032e4e;
+    color: white;
+    text-align: center;
+    min-width: 430px;
+}
+.Links{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 40px;
+}
+.Connect{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+.img-9{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.img-10, .img-10, .img-10, .img-10{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+main, footer{
+    min-width: 430px;
+}
+
+
+footer {
+    background-color: #9cb0f1;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* FEED BACK FORM */
+
+.container {
+    margin-top: 60px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    height: 120px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    width: auto;
+    padding: 8px 20px;
+    color: #fff;
+    border: mediumaquamarine;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Analysis - Water Treatment Plant</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="shortcut icon" href="/images/water.webp">
+</head>
+<body>
+    <div class="header-container">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="problems.html">Report Problems</a></li>
+                <li><a href="data.html">Data Analysis</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="explain.html">Water Treatment Process</a></li>
+            </ul>
+        </nav>
+    </header>
+    </div>
+
+    <div class="component">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            width: 400px;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Analysis</h1>
+
+    <div class="chart-grid">
+        <div class="chart-container">
+            <canvas id="lineChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="barChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="doughnutChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="radarChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="polarChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Line Graph
+        var lineCtx = document.getElementById('lineChart').getContext('2d');
+        var lineChart = new Chart(lineCtx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Gallons of clean water',
+                    data: [12, 19, 30, 50, 20, 23],
+                    borderColor: 'rgb(75, 192, 192)',
+                    fill: false
+                }]
+            },
+            options: {}
+        });
+
+        // Pie Chart
+        var pieCtx = document.getElementById('pieChart').getContext('2d');
+        var pieChart = new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Coagulated', 'Flocculated',  'Sedimented', 'Filtered'],
+                datasets: [{
+                    label: 'Gallons of water',
+                    data: [10, 20, 30, 40],
+                    backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)']
+                }]
+            },
+            options: {}
+        });
+
+        // Bar Chart
+        var barCtx = document.getElementById('barChart').getContext('2d');
+        var barChart = new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Gallons of water',
+                    data: [12, 19, 30, 50, 20, 23],
+                    backgroundColor: 'rgb(54, 162, 235)'
+                }]
+            },
+            options: {}
+        });
+
+        // Doughnut Chart
+        var doughnutCtx = document.getElementById('doughnutChart').getContext('2d');
+        var doughnutChart = new Chart(doughnutCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Coagulated', 'Flocculated',  'Sedimented', 'Filtered'],
+                datasets: [{
+                    label: 'Data',
+                    data: [10, 20, 30, 40],
+                    backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)']
+                }]
+            },
+            options: {}
+        });
+
+        // Radar Chart
+        var radarCtx = document.getElementById('radarChart').getContext('2d');
+        var radarChart = new Chart(radarCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Washing', 'Drinking', 'Cleaning', 'Treating', 'Boiling', 'Bathing', 'Impure'],
+                datasets: [{
+                    label: 'Gallons of water',
+                    data: [75, 80, 70, 81, 90, 55, 30],
+                    fill: true,
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                    borderColor: 'rgb(54, 162, 235)',
+                    pointBackgroundColor: 'rgb(54, 162, 235)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(54, 162, 235)'
+                }]
+            },
+            options: {}
+        });
+
+        // Polar Area Chart
+        var polarCtx = document.getElementById('polarChart').getContext('2d');
+        var polarChart = new Chart(polarCtx, {
+            type: 'polarArea',
+            data: {
+                labels: ['Coagulated', 'Flocculated',  'Sedimented', 'Filtered' ,'Polluted',],
+                datasets: [{
+                    label: 'Data',
+                    data: [11, 16, 7, 3, 14],
+                    backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)']
+                }]
+            },
+            options: {}
+        });
+    </script>
+    </div>
+
+    <footer id="foot">
+        <div class="Links">
+            <span style="color: white;font-weight: bold;">Useful Links</span><br>
+            <span style="color:rgb(18, 78, 18);">&horbar;&horbar;&horbar;&horbar;&horbar;</span>&horbar;&horbar;&horbar;&horbar;&horbar;
+        </div>
+            <div class="Connect">
+                <span style="color: white; font-weight: bold;">Connect With Us</span><br><br>
+                <a href="https://www.facebook.com/" title="Facebook"><img src="./images/facebook-icon.png" alt="Facebook Icon" class="img-9"></a>
+                <a href="https://twitter.com/" title="Twitter"><img src="./images/twitter-icon.png" alt="Twitter Icon" class="img-10"></a>
+                <a href="https://www.instagram.com/?hl=en" title="Instagram"><img src="./images/instagram-icon.png" alt="Instagram Icon" class="img-10"></a>
+                <a href="https://www.youtube.com/" title="Youtube"><img src="./images/youtube-icon.png" alt="Youtube Icon" class="img-10"></a>
+                <a href="https://www.whatsapp.com/" title="Whatsapp"><img src="./images/whatsapp-icon.jpg" alt="Whatsapp Icon" class="img-10"></a>
+            </div>
+    </footer>
+    <div class="foot-1">Copyright &copy;  2023 Aquatic Solutions Inc. All rights reserved.</div>
+</body>
+</html>
